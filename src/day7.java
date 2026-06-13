@@ -1,127 +1,75 @@
-/*public class day7 {
+public class day7{
 
-    static class Request {
+    interface Employee {
+        String Name();
+        String id();
+        String Salary();
+    }
 
-        private final String name;
-        private final String date;
-        private final String reason;
+    static class BankEmployee implements Employee {
 
-        Request(String name, String date, String reason) {
-            this.name = name;
-            this.date = date;
-            this.reason = reason;
+        @Override
+        public String Name() {
+            return "nithya";
         }
 
-        void approve) {
+        @Override
+        public String id() {
+            return "101";
         }
 
-        void reject() {
+        @Override
+        public String Salary() {
+            return "50000";
         }
 
-        void displayDetails() {
-            System.out.println("Name   : " + name);
-            System.out.println("Date   : " + date);
-            System.out.println("Reason : " + reason);
+        public String solveprogram() {
+            System.out.println("solution");
+            return "solution";
         }
     }
 
-    static class LeaveRequest extends Request {
+    static class CheckingEmployee implements Employee {
 
-        LeaveRequest(String name, String date, String reason) {
-            super(name, date, reason);
+        @Override
+        public String Name() {
+            return "nithya";
         }
 
-        void approve() {
-            System.out.println("Leave request approved.");
+        @Override
+        public String id() {
+            return "102";
         }
 
-        void reject() {
-            System.out.println("Leave request rejected.");
-        }
-    }
-
-    static class LoanRequest extends Request {
-
-        LoanRequest(String name, String date, String reason) {
-            super(name, date, reason);
+        @Override
+        public String Salary() {
+            return "45000";
         }
 
-        void approve() {
-            System.out.println("Loan request approved.");
-        }
-
-        void reject() {
-            System.out.println("Loan request rejected.");
+        public String work() {
+            System.out.println("process");
+            return "process";
         }
     }
 
-    static void main(String[] args) {
+    public static void main(String[] args) {
 
-        LeaveRequest leaveRequest =
-                new LeaveRequest("nithya", "12-06-2026", "Medical Leave");
+        BankEmployee bank = new BankEmployee();
 
-        leaveRequest.displayDetails();
-        leaveRequest.approve();
+        System.out.println("Name : " + bank.Name());
+        System.out.println("ID : " + bank.id());
+        System.out.println("Salary : " + bank.Salary());
+        bank.solveprogram();
 
         System.out.println();
 
-        LoanRequest loanRequest =
-                new LoanRequest("nithya", "12-06-2026", "Education Loan");
+        CheckingEmployee checking = new CheckingEmployee();
 
-        loanRequest.displayDetails();
-
-public class
-   static class payment {
-       String amount;
-
-       payment(String
-*/
-class Payment {
-    void transfer(int amount) {
-        System.out.println("Payment: " + amount);
+        System.out.println("Name : " + checking.Name());
+        System.out.println("ID : " + checking.id());
+        System.out.println("Salary : " + checking.Salary());
+        checking.work();
     }
 }
-
-class UpiPayment extends Payment {
-    void transfer(int amount) {
-        System.out.println("UPI Payment: " + amount);
-    }
-}
-
-class CardPayment extends Payment {
-    void transfer(int amount) {
-        System.out.println("Card Payment: " + amount);
-    }
-}
-
-class NetBankingPayment extends Payment {
-    void transfer(int amount) {
-        System.out.println("Net Banking Payment: " + amount);
-    }
-}
-
-public class day7{
-    public static void main(String[] args) {
-        Payment p;
-
-        p = new UpiPayment();
-        p.transfer(500);
-
-        p = new CardPayment();
-        p.transfer(1000);
-
-        p = new NetBankingPayment();
-        p.transfer(2000);
-    }
-}
-
-
-
-
-
-
-
-
-
 
 
