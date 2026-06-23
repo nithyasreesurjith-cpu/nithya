@@ -1,5 +1,4 @@
 
-
 import java.util.*;
 
 class MenuItem {
@@ -34,7 +33,7 @@ class Order {
     }
 }
 
-public class day15 {
+public class Main {
     public static void main(String[] args) {
 
         MenuItem tea = new MenuItem("M1", "Tea", 20);
@@ -51,3 +50,4 @@ public class day15 {
         System.out.println("Total Bill : ₹" + order.calculateBill());
     }
 }
+
